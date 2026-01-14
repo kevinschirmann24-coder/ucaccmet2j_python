@@ -24,7 +24,6 @@ with open('ucaccmet2j_python/precipitation.json') as file:
                 list.append(dict)
                 #break is used or else for every dictionary analysed 4 total copies of it will be added to my list of dictionaries instead of just the one
                 break
-print(list)
 
 #calculate the precipitation of each individual month
 for dict in list:
@@ -36,38 +35,38 @@ for dict in list:
         if "2010-02" in dict["date"]: 
             february_precipitation_4 += dict["value"]
         february_precipitation = int(february_precipitation_4) / 4
-        #fix these subsequent lines again :(
-        if dict["date"] == "2010-03":
+        if "2010-03" in dict["date"]:
             march_precipitation_4 += dict["value"]
         march_precipitation = int(march_precipitation_4) / 4
-        if dict["date"] == "2010-04":
+        if "2010-04" in dict["date"]:
             april_precipitation_4 += dict["value"]
         april_precipitation = int(april_precipitation_4) / 4
-        if dict["date"] == "2010-05":
+        if "2010-05" in dict["date"]:
             may_precipitation_4 += dict["value"]
         may_precipitation = int(may_precipitation_4) / 4
-        if dict["date"] == "2010-06":
+        if "2010-06" in dict["date"]:
             june_precipitation_4 += dict["value"]
         june_precipitation = int(june_precipitation_4) / 4
-        if dict["date"] == "2010-07":
+        if "2010-07" in dict["date"]:
             july_precipitation_4 += dict["value"]
         july_precipitation = int(july_precipitation_4) / 4
-        if dict["date"] == "2010-08":
+        if "2010-08" in dict["date"]:
             august_precipitation_4 += dict["value"]
         august_precipitation = int(august_precipitation_4) / 4
-        if dict["date"] == "2010-09":
+        if "2010-09" in dict["date"]:
             september_precipitation_4 += dict["value"]
         september_precipitation = int(september_precipitation_4) / 4
-        if dict["date"] == "2010-10":
+        if "2010-10" in dict["date"]:
             october_precipitation_4 += dict["value"]
         october_precipitation = int(october_precipitation_4) / 4
-        if dict["date"] == "2010-11":
+        if "2010-11" in dict["date"]:
             november_precipitation_4 += dict["value"]
         november_precipitation = int(november_precipitation_4) / 4
-        if dict["date"] == "2010-12":
+        if "2010-12" in dict["date"]:
             december_precipitation_4 += dict["value"]
         december_precipitation = int(december_precipitation_4) / 4
 
 
 #calculate the total precipitation of that year. CHECK FOR TIMES FOUR
 total_precipitation_2010 = january_precipitation + february_precipitation + march_precipitation + april_precipitation + may_precipitation + june_precipitation + july_precipitation + september_precipitation + october_precipitation + november_precipitation + december_precipitation
+print(total_precipitation_2010)
